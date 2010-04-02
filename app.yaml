@@ -1,0 +1,17 @@
+application: yammerfall
+version: 1-3
+runtime: python
+api_version: 1
+
+handlers:
+- url: /styles
+  static_dir: static/styles
+
+- url: /images
+  static_dir: static/images
+
+- url: /js
+  static_dir: static/js
+      
+- url: .*
+  script: main.py

@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block mainpanel %}
+	<span class="yammerfall">
+	<div id="messages">
+	</div>
+	<script type="text/javascript">
+		<!--
+		function timedRefresh(timeoutPeriod) {
+			setInterval(refreshStream,timeoutPeriod);
+		}
+		function refreshStream() {
+			$('#messages').load("{{messagesUrl}}");
+		}
+		refreshStream();
+		timedRefresh(10000);
+		//   -->
+	</script>
+	</span>
+{% endblock %}

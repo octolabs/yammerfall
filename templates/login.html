@@ -1,0 +1,79 @@
+{% extends "base.html" %}
+{% block mainpanel %}
+
+<span class="yammerfall">
+
+<div class="message" id="logos">
+<div class="yammer">
+<!-- content goes here -->
+	<h2>Follow these 7 steps to authenticate this Yammerfall instance with yammer.com</h2>
+<!-- content went here -->
+</div>
+</div>
+
+<div class="message" id="logos">
+<div class="yammer">
+<!-- content goes here -->
+	 <h3>1) Click this <a href="{{user_auth_url}}?oauth_token={{oauth_token}}" onclick="window.open (this.href, 'child', 'height=600,width=450'); return false">link</a></h3>
+	(This will open up yammer.com in a new browser window.)
+<!-- content went here -->
+</div>
+</div>
+
+<div class="message" id="logos">
+<div class="yammer">
+<!-- content goes here -->
+	<h3>2) Login using your yammer username and password.</h3>
+	(If you are already logged in, go to step 3. If you do not have an account with yammer, you can create one now.)
+<!-- content went here -->
+</div>
+</div>
+
+<div class="message" id="logos">
+<div class="yammer">
+<!-- content goes here -->
+	<h3>3) Click on the "Authorize" button.</h3>
+<!-- content went here -->
+</div>
+</div>
+
+<div class="message" id="logos">
+<div class="yammer">
+<!-- content goes here -->
+	<h3>4) You will see a 4 character code. Remember the code.</h3>
+<!-- content went here -->
+</div>
+</div>
+
+<form method="post">
+<input type="hidden" name="oauth_token" value="{{oauth_token}}">
+<input type="hidden" name="oauth_token_secret" value="{{oauth_token_secret}}">
+
+<div class="message" id="logos">
+<div class="yammer">
+<!-- content goes here -->
+	<h3>5) Enter the 4 character code: <input type="text" name="oauth_verifier" size="4" class="formfield"></h3>
+<!-- content went here -->
+</div>
+</div>
+
+<div class="message" id="logos">
+<div class="yammer">
+<!-- content goes here -->
+	<h3>6) Click this button:&nbsp;<input type="submit" value="Submit Authorization Code" class="formbutton"></h3>
+<!-- content went here -->
+</div>
+</div>
+
+</form>
+
+<div class="message" id="logos">
+<div class="yammer">
+<!-- content goes here -->
+	<h3>7) Enjoy the latest yammer posts!</h3>
+<!-- content went here -->
+</div>
+</div>
+
+</span>
+{% endblock %}

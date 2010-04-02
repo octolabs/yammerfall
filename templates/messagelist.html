@@ -1,0 +1,49 @@
+{% for message in messages %}
+<div class="message" id="{{messsage.id}}">
+
+	  <div class="yammer">
+	    <!-- content goes here -->
+		<span class="userimg"><img src="{{message.mugshot_url}}" height="48" width="48"/></span>
+      
+		<div class="yammerer">
+			<strong class="yammerer">{{message.full_name}}
+			{% if message.in_reply_to %}
+			<font color="#5B6F87">in reply to {{ message.in_reply_to.0 }}</font>
+			{% endif %}
+			</strong>
+		</div>
+		<div class="break-word">
+			{{message.body.plain}}
+			{% if message.attachments %}
+				{% for attachment in message.attachments %}
+					{% if attachment.image %}
+						<img src="{{ attachment.image.url }}" width="525"/>
+					{% endif %}
+				{% endfor %}
+			{% endif %}
+		</div>
+		<span class="creationdate">{{message.created_at}}</span><span class="messageinfo"> from {{message.client_type}}</span>
+		<div class="likedby">
+			{% if message.liked_by.count %}
+				{% for liked_by in message.like_list %}
+				<img src="{{liked_by.1}}" height="48" width="48" class="userimage"/>
+				{{ liked_by.0 }} likes this post.<br>
+				{% endfor %}
+			{% endif %}
+		</div>
+		<!-- content went here -->
+	  </div>
+	
+</div>
+{% endfor %}
+<script type="text/javascript">
+	$('.creationdate').each(function(index) {
+		var datestr = $(this).text()
+		var dateOb = Date.parse(datestr);
+		dateOb = dateOb.setTimezoneOffset(+0000);
+		var newDateStr = "Posted at " + dateOb.toString('h:mm tt on dddd, MMMM d, yyyy');
+		$(this).text(newDateStr);
+	});
+</script>
+	
+	

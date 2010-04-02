@@ -1,0 +1,88 @@
+body {
+	background-color: #BEC4CF;
+	font-family: "Helvetica Neue", "Helvetica", "Arial", Sans-serif;
+}
+
+span.yammerfall {
+	float:left;
+}
+
+span.userimg {
+	float:left;
+	padding: 15px;
+}
+
+
+div.message {
+	clear:both;
+	padding: 10px;
+}
+
+.yammer {
+	-webkit-border-radius: 10px;
+	-khtml-border-radius: 10px;	
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	background-color: #FFFFFF;
+	vertical-align: middle;
+	width: 625px;
+	padding-right: 20px;
+	padding-left: 20px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	font-size: 120%;
+	min-height: 80px;
+	color: #222222;
+}
+
+div.yammerer {
+	/*border-bottom: 2px solid #5B6F87;*/
+	padding-bottom: 0px;
+	margin-bottom: 15px;
+}
+
+strong.yammerer {
+	font-size: 80%;
+	color: #E91A38;
+	font-weight: bold;
+}
+
+span.creationdate {
+	padding-top: 10px;
+	font-size: 80%;
+	color: #999999;
+}
+
+span.messageinfo {
+	padding-top: 10px;
+	font-size: 80%;
+	color: #999999;
+}
+
+div.likedby {
+	font-size: 80%;
+	background-color: #FFFFFF;
+	color: #5B6F87;
+}
+
+div.break-word {
+  word-wrap: break-word;
+}
+
+a {
+	text-decoration: underline;
+	color: #000000;
+}
+
+a:hover {
+	text-decoration: underline;
+	color: #222222;
+}
+
+input.formfield {
+	font-size: 80%;
+}
+
+input.formbutton {
+	font-size: 80%;
+}

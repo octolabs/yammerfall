@@ -1,0 +1,41 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+ "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title>YammerFall</title>
+	<link rel="stylesheet" href="/styles/web.css" type="text/css">
+	<script type="text/javascript" src="/js/jquery-1.3.min.js"></script>
+	<script type="text/javascript" src="/js/date.js"></script>
+	<script type="text/javascript" src="/js/date-en-us.js"></script>
+	<script>
+		$(document).ready(function() {
+		  $('#logos').click(function() {
+		    $('#description').toggle(400);
+		    return false;
+		  });
+		});
+	</script>
+</head>
+<body>
+	<span class="yammerfall">
+	<div class="message" id="logos">
+		  <div class="yammer">
+		    <!-- content goes here -->
+			<h2>
+			<img src="https://assets1.yammer.com/images/YammerIconApp126x126.jpg" height="50">
+			&nbsp;&nbsp;Yammerfall
+			</h2>
+			<div id="description">
+			<b>Yammer</b> is a verified social network. You can share info on your profile (like Facebook) and connect with others through updates (like Twitter.)
+			</br>
+			<b>Yammerfall</b> is an app that displays the latest updates of your entire network.
+			</div>
+			<!-- content went here -->
+		  </div>
+	</div>
+	</span>
+		
+	{% block mainpanel %}
+	{% endblock %}
+</body>
+</html>
